@@ -1,12 +1,13 @@
 {
   "dependencies": {
-    "express": "^4.19.2"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.1"
   },
   "name": "app_plus",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
-  "devDependencies": {},
   "scripts": {
     "dev": "nodemon api/index.js",
     "start": "node api/index.js "
