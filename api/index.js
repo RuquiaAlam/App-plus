@@ -17,9 +17,9 @@ mongoose
 const __dirname = path.resolve();
 const app = express();
 
-app.use(express.static(path.join(__dirname, "/client/dist")));
+app.use(express.static(path.join(__dirname, '/client/dist')));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client ", "dist", "index.html"));
+  res.sendFile(path.join(process.cwd(), "client ", "dist", "index.html"));
 });
 //allow json as input of backend
 app.use(express.json());
