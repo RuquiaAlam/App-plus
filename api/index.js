@@ -14,15 +14,13 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-const _dirname=path.resolve
+const _dirname = path.resolve();
 const app = express();
 
-app.use(express.static(path.join(__dirname, "/client/dist")))
-app.get("/*",(req,res)=>
-{
-
-  req.sendFile(path.join(_dirname,"client " ,"dist" ,"index.html"))
-})
+app.use(express.static(path.join(_dirname, "/client/dist")));
+app.get("/*", (req, res) => {
+  req.sendFile(path.join(_dirname, "client ", "dist", "index.html"));
+});
 //allow json as input of backend
 app.use(express.json());
 app.use(cookieParser());
